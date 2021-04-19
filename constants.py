@@ -9,10 +9,9 @@ message2 = ['Сообщение1', 'Сообщение2', 'Сообщение3',
 message3 = ['Сообщение1', 'Сообщение2', 'Сообщение3', 'Сообщение4','Сообщение5']
 message4 = ['Сообщение1', 'Сообщение2', 'Сообщение3', 'Сообщение4','Сообщение5']
 message5 = ['Сообщение1', 'Сообщение2', 'Сообщение3', 'Сообщение4','Сообщение5']
-# ["Сообщение1", "Сообщение2", "Сообщение3", "Сообщение4","Сообщение5"]
 
-random_message1 = lambda: random.choices(message1)
-random_message2 = lambda: random.choices(message2)
-random_message3 = lambda: random.choices(message3)
-random_message4 = lambda: random.choices(message4)
-random_message5 = lambda: random.choices(message5)
+random_message1 = lambda: random.choice(['Сообщение1', 'Сообщение2', 'Сообщение3', 'Сообщение4','Сообщение5'])
+random_message2 = lambda: random.choice(['Сообщение1', 'Сообщение2', 'Сообщение3', 'Сообщение4','Сообщение5'])
+random_message3 = lambda: random.choice(['Сообщение1', 'Сообщение2', 'Сообщение3', 'Сообщение4','Сообщение5'])
+random_message4 = lambda: random.choice(['Сообщение1', 'Сообщение2', 'Сообщение3', 'Сообщение4','Сообщение5'])
+random_message5 = lambda: random.choice(['Сообщение1', 'Сообщение2', 'Сообщение3', 'Сообщение4','Сообщение5'])
