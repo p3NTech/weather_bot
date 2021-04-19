@@ -3,8 +3,8 @@ import telebot
 import random
 
 url = 'http://api.openweathermap.org/data/2.5/weather' #open weather url
-api_open_weather = ''#ключ open weather api
-api_telegram_token = '' #токен telegram api
+api_open_weather = '966cc6ce89188b2bc797546a3487bf55'#ключ open weather api
+api_telegram_token = '1687680321:AAHm7NH2ZsagoBAlcfNSV8U5Wwj0U9jhHK0' #токен telegram api
 bot = telebot.TeleBot(api_telegram_token)
 print("")
 print("Weather bot [Telegram: @p3ntech]") #сообщение в консоль
@@ -46,19 +46,19 @@ def test(message):
         weather = result.json() #экспорт параметров
 
         if weather["main"]['temp'] < -10:   #при -10
-            status = random_message1 # 
+            status = "На улице холодно, одевайтесь теплее! Чтобы согреться, могу предложить Вам сходить в ресторан и выпить чашечку кофе!"  #random_message1 # 
             #bot.send_photo(message.chat.id, 'ссылка на изображение', "") # изображение1
         elif weather["main"]['temp'] < 0:   #при 0
-            status = random_message2 # 
+            status = "Мороз и солнце, день чудесный! Самое время выпить глинтвейн!" # random_message2 # 
             #bot.send_photo(message.chat.id, 'ссылка на изображение', "") # изображение2
         elif weather["main"]['temp'] < 10:  #при +10
-            status = random_message3 # 
+            status = "Погода шепчет, что сегодня вам нужно сходить на каток! Но стоит одеть шапку и шарф!" # random_message3 # 
             #bot.send_photo(message.chat.id, 'ссылка на изображение', "") # изображение3
         elif weather["main"]['temp'] < 30:  #при +30
-            status = random_message4 # 
+            status = "Пейте много воды, на улице жарко!" # random_message4 # 
             #bot.send_photo(message.chat.id, 'ссылка на изображение', "") # изображение4
         else:   #при +30+
-            status = random_message5 # 
+            status = "Не выходите на улицу без надобности и пейте много воды, на улице жарко!" # random_message5 # 
             #bot.send_photo(message.chat.id, 'ссылка на изображение', "") # изображение5
 
         bot.send_message(message.chat.id, "Сейчас в городе " + str(weather["name"]) + " температура " +
