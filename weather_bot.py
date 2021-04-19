@@ -54,7 +54,9 @@ def test(message):
                          "-------------------------------------------------------------------"
                          "\n" + status)
     except:
-        bot.send_photo(message.chat.id, 'https://darkside.guru/files/404city.png', "Город " + city_name + " не найден " + constants.random_message3) # сообщение в случае если город не найден
+	bot.send_message(message.chat.id, constants.random_message3)
+	
+        bot.send_photo(message.chat.id, 'https://darkside.guru/files/404city.png', "Город " + city_name + " не найден ") # сообщение в случае если город не найден
 		
 print("Started!")
 bot.polling(none_stop=True)
