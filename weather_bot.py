@@ -32,19 +32,19 @@ def test(message):
         weather = result.json() #экспорт параметров
 
         if weather["main"]['temp'] < -10:   #при -10
-            status = "На улице холодно, одевайтесь теплее! Чтобы согреться, могу предложить Вам сходить в ресторан и выпить чашечку кофе!" # random_message1 # 
+            status = random_message1# "На улице холодно, одевайтесь теплее! Чтобы согреться, могу предложить Вам сходить в ресторан и выпить чашечку кофе!" # random_message1 # 
             #bot.send_photo(message.chat.id, 'ссылка на изображение', "") # изображение1
         elif weather["main"]['temp'] < 0:   #при 0
-            status = "На улице холодно, одевайтесь теплее! Чтобы согреться, могу предложить Вам сходить в ресторан и выпить чашечку кофе!"  # random_message2 # 
+            status = random_message2#"На улице холодно, одевайтесь теплее! Чтобы согреться, могу предложить Вам сходить в ресторан и выпить чашечку кофе!"  # random_message2 # 
             #bot.send_photo(message.chat.id, 'ссылка на изображение', "") # изображение2
         elif weather["main"]['temp'] < 10:  #при +10
-            status = "Погода шепчет, что сегодня вам нужно сходить на каток! Но стоит одеть шапку и шарф!" # random_message3 # 
+            status = random_message3 #"Погода шепчет, что сегодня вам нужно сходить на каток! Но стоит одеть шапку и шарф!" # random_message3 # 
             #bot.send_photo(message.chat.id, 'ссылка на изображение', "") # изображение3
         elif weather["main"]['temp'] < 30:  #при +30
-            status =  "Пейте много воды, на улице жарко!" # random_message4 #
+            status =  random_message4 #"Пейте много воды, на улице жарко!" # random_message4 #
             #bot.send_photo(message.chat.id, 'ссылка на изображение', "") # изображение4
         else:   #при +30+
-            status = "Не выходите на улицу без надобности и пейте много воды, на улице жарко!" # random_message5 #
+            status = random_message5 #"Не выходите на улицу без надобности и пейте много воды, на улице жарко!" # random_message5 #
             #bot.send_photo(message.chat.id, 'ссылка на изображение', "") # изображение5
 
         bot.send_message(message.chat.id, "Сейчас в городе " + str(weather["name"]) + " температура " +
