@@ -2,15 +2,16 @@ import requests
 import telebot
 
 url = 'http://api.openweathermap.org/data/2.5/weather' #open weather url
-api_open_weather = ''#ключ open weather api
-api_telegram_token = '' #токен telegram api
+api_open_weather = '966cc6ce89188b2bc797546a3487bf55'#ключ open weather api
+api_telegram_token = '1687680321:AAHm7NH2ZsagoBAlcfNSV8U5Wwj0U9jhHK0' #токен telegram api
 bot = telebot.TeleBot(api_telegram_token)
 print("Weather bot [@p3ntech]")#сообщение в консоль
 print("initialize")#сообщение в консоль
 @bot.message_handler(commands=['start'])#старт
 def welcome(message):
     bot.send_message(message.chat.id, f'Привет!  {message.from_user.first_name} \n'
-                                      f' напиши название города и узнай погоду в нём. "/help"')#Сообщение при запуске
+                                      f' напиши название города и узнай погоду в нём. \n' 
+                                      f' Для помощи нажми "/help"') #Сообщение при запуске
 
 
 @bot.message_handler(commands=['help'])
