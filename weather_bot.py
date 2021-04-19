@@ -2,10 +2,7 @@ import requests
 import telebot
 import constants
 
-url = 'http://api.openweathermap.org/data/2.5/weather' #open weather url
-api_open_weather = ''#ключ open weather api
-api_telegram_token = '' #токен telegram api
-bot = telebot.TeleBot(api_telegram_token)
+bot = telebot.TeleBot(constants.api_telegram_token)
 print("")
 print("Weather bot [Telegram: @p3ntech]") #сообщение в консоль
 print("initialize") #сообщение в консоль
@@ -29,8 +26,8 @@ def test(message):
     city_name = message.text
 
     try:
-        params = {'APPID': api_open_weather, 'q': city_name, 'units': 'metric', 'lang': 'ru'}
-        result = requests.get(url, params=params) #параметры api open weather
+        params = {'APPID': constants.api_open_weather, 'q': city_name, 'units': 'metric', 'lang': 'ru'}
+        result = requests.get(constants.url, params=params) #параметры api open weather
         weather = result.json() #экспорт параметров
 
         if weather["main"]['temp'] < -10:   #при -10
