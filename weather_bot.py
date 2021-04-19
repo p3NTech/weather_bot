@@ -1,5 +1,6 @@
 import requests
 import telebot
+import random
 
 url = 'http://api.openweathermap.org/data/2.5/weather' #open weather url
 api_open_weather = '' #ключ open weather api
@@ -8,6 +9,10 @@ bot = telebot.TeleBot(api_telegram_token)
 print("")
 print("Weather bot [Telegram: @p3ntech]") #сообщение в консоль
 print("initialize") #сообщение в консоль
+
+message15 = ['Сообщение1', 'Сообщение2', 'Сообщение3', 'Сообщение4','Сообщение5']
+random_message = lambda: random.choice(message15)
+
 @bot.message_handler(commands=['start']) #старт
 def welcome(message):
     bot.send_message(message.chat.id, f'Привет!  {message.from_user.first_name}'
