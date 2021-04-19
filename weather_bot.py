@@ -12,7 +12,7 @@ bot = telebot.TeleBot(constants.api_telegram_token)
 def welcome(message):
     bot.send_message(message.chat.id, f'Привет!  {message.from_user.first_name}'
                                       f' напиши название города и узнай погоду в нём. \n' 
-                                      f' Для помощи напиши "/help"') #Сообщение при запуске
+                                      f'Для помощи напиши "/help"') #Сообщение при запуске
 
 
 @bot.message_handler(commands=['help'])
