@@ -10,9 +10,9 @@ print("Weather bot [Telegram: @p3ntech]") #сообщение в консоль
 print("initialize") #сообщение в консоль
 @bot.message_handler(commands=['start']) #старт
 def welcome(message):
-    bot.send_message(message.chat.id, f'Привет!  {message.from_user.first_name} \n'
+    bot.send_message(message.chat.id, f'Привет!  {message.from_user.first_name}'
                                       f' напиши название города и узнай погоду в нём. \n' 
-                                      f' Для помощи нажми "/help"') #Сообщение при запуске
+                                      f' Для помощи напиши "/help"') #Сообщение при запуске
 
 
 @bot.message_handler(commands=['help'])
