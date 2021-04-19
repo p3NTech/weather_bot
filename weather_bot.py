@@ -2,10 +2,11 @@ import requests
 import telebot
 import constants
 
-bot = telebot.TeleBot(constants.api_telegram_token)
 print("")
 print("Weather bot [Telegram: @p3ntech]") #сообщение в консоль
 print("initialize") #сообщение в консоль
+
+bot = telebot.TeleBot(constants.api_telegram_token)
 
 @bot.message_handler(commands=['start']) #старт
 def welcome(message):
