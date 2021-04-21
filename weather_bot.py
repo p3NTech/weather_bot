@@ -42,7 +42,7 @@ def test(message):
             #bot.send_photo(message.chat.id, 'ссылка на изображение', "") # изображение3
         elif weather["main"]['temp'] < 30:  #при +30
             status =  "Пейте много воды, на улице жарко!" # random_message4 #
-            #bot.send_photo(message.chat.id, 'ссылка на изображение', "") # изображение4
+            bot.send_photo(message.chat.id, 'http://f0535055.xsph.ru/1/pog2.jpg', "") # изображение4
         else:   #при +30+
             status = "Не выходите на улицу без надобности и пейте много воды, на улице жарко!" # random_message5 #
             #bot.send_photo(message.chat.id, 'ссылка на изображение', "") # изображение5
