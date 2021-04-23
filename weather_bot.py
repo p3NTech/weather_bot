@@ -64,11 +64,11 @@ def test(message):
                          "На улице сейчас " + str(weather['weather'][0]["description"]+"\n"+random_message5))
 	
        # bot.send_message(message.chat.id, "Сейчас в городе " + str(weather["name"]) + " температура " +
-       #                  str(weather["main"]['temp']) + "°C" + "\n" +
-       #                  "Влажность: " + str(int(weather['main']['humidity'])) + "%" + "\n" +
-        #                 "На улице сейчас " + str(weather['weather'][0]["description"]) + "\n"+
-        #                 "-------------------------------------------------------------------"
-        #                 "\n" + status)
+       #                 str(weather["main"]['temp']) + "°C" + "\n" +
+       #                 "Влажность: " + str(int(weather['main']['humidity'])) + "%" + "\n" +
+       #                 "На улице сейчас " + str(weather['weather'][0]["description"]) + "\n"+
+       #                 "-------------------------------------------------------------------"
+       #                 "\n" + status)
 
     except:
         bot.send_photo(message.chat.id, 'https://darkside.guru/files/404city.png', "Город " + city_name + " не найден") # сообщение в случае если город не найден
