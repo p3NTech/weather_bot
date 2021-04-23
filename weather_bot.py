@@ -3,8 +3,9 @@ import telebot
 import constants
 
 print("")
-print("Weather bot [Telegram: @p3ntech]") #сообщение в консоль
 print("initialize") #сообщение в консоль
+print("")
+print("NURI TOPMO3 :D")
 
 bot = telebot.TeleBot(constants.api_telegram_token)
 
