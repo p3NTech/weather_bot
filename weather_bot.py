@@ -7,19 +7,21 @@ print("initialize") #сообщение в консоль
 
 bot = telebot.TeleBot(constants.api_telegram_token)
 
-@bot.message_handler(commands=['start'])#старт
+@bot.message_handler(commands=['start']) #старт
 def welcome(message):
-    bot.send_message(message.chat.id, f'Привет!  {message.from_user.first_name} \n'
-                                      f' напиши название города и узнай погоду в нём. "/help"')#Сообщение при запуске
+    bot.send_message(message.chat.id, f'Привет!  {message.from_user.first_name}'
+                                      f' напиши название города и узнай погоду в нём. \n' 
+                                      f'Для помощи напиши "/help"') #Сообщение при запуске
 
 
 @bot.message_handler(commands=['help'])
 def welcome(message):
     bot.send_message(message.chat.id,
                      f'/start запуск бота \n'
-                     )#сообщение(ответ) на команду /help
+                     ) #сообщение(ответ) на команду /help
 
-@bot.message_handler(content_types=['text'])#обработчик
+
+@bot.message_handler(content_types=['text']) #обработчик
 def test(message):
     city_name = message.text
 
