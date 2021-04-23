@@ -51,7 +51,7 @@ str(weather["main"]['temp']) + "°C" + "\n" + "💦Влажность: " + str(i
         elif weather["main"]['temp'] < 30:  #при +30
             status = "Пейте много воды, на улице жарко!"
 		bot.send_photo(message.chat.id, 'http://f0535055.xsph.ru/1/pog2.jpg', "🌡Сейчас в городе " + str(weather["name"]) + " температура " +
-str(weather["main"]['temp']) + "°C" + "\n" + "💦Влажность: " + str(int(weather['main']['humidity'])) + "%" + "\n" + "🏘На улице сейчас " + str(weather['weather'][0]["description"]) + "\n"+"Очень холодно, сидим дома!" ) #
+str(weather["main"]['temp']) + "°C" + "\n" + "💦Влажность: " + str(int(weather['main']['humidity'])) + "%" + "\n" + "🏘На улице сейчас " + str(weather['weather'][0]["description"]) + "\n"+random_message4 ) #
         else:   #при +30+
             status = "Не выходите на улицу без надобности и пейте много воды, на улице жарко!"
 bot.send_photo(message.chat.id, 'http://f0535055.xsph.ru/1/pog2.jpg', "🌡Сейчас в городе " + str(weather["name"]) + " температура " +
