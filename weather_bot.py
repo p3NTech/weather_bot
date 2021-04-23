@@ -6,6 +6,8 @@ import random
 print("")
 print("initialize") #сообщение в консоль
 
+bot = telebot.TeleBot(constants.api_telegram_token)
+
 message1 = ['1.1', '1.2', '1.3', '1.4','1.5']
 message2 = ['2.1', '2.2', '2.3', '2.4','2.5']
 message3 = ['3.1', '3.2', '3.3', '3.4','3.5']
@@ -17,10 +19,6 @@ random_message2 = random.choice(message2)
 random_message3 = random.choice(message3)
 random_message4 = random.choice(message4)
 random_message5 = random.choice(message5)
-
-print(random_message4)
-
-bot = telebot.TeleBot(api.api_telegram_token)
 
 @bot.message_handler(commands=['start']) #старт
 def welcome(message):
