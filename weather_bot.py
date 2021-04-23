@@ -6,7 +6,7 @@ import random
 print("")
 print("initialize") #сообщение в консоль
 
-bot = telebot.TeleBot(constants.api_telegram_token)
+bot = telebot.TeleBot(api.api_telegram_token)
 
 message1 = ['1.1', '1.2', '1.3', '1.4','1.5']
 message2 = ['2.1', '2.2', '2.3', '2.4','2.5']
@@ -30,7 +30,7 @@ def test(message):
     city_name = message.text
 
     try:
-        params = {'APPID': constants.api_open_weather, 'q': city_name, 'units': 'metric', 'lang': 'ru'}
+        params = {'APPID': api.api_open_weather, 'q': city_name, 'units': 'metric', 'lang': 'ru'}
         result = requests.get(url, params=params)#параметры api open weather
         weather = result.json()#экспорт параметров
 
