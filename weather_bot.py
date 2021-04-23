@@ -7,6 +7,8 @@ print("")
 print("initialize") #сообщение в консоль
 print("")
 print("NURI TOPMO3 :D")
+list = [один, два, три, четыре, пять]
+print(random.choice(list))
 
 bot = telebot.TeleBot(constants.api_telegram_token)
 
