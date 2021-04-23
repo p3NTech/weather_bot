@@ -41,27 +41,27 @@ def test(message):
             status = bot.send_photo(message.chat.id, 'https://darkside.guru/files/404city.png', "Сейчас в городе " + str(weather["name"]) + " температура " +
                          str(weather["main"]['temp']) + "°C" + "\n" +
                          "Влажность: " + str(int(weather['main']['humidity'])) + "%" + "\n" +
-                         "На улице сейчас " + str(weather['weather'][0]["description"]+random_message1))
+                         "На улице сейчас " + str(weather['weather'][0]["description"]+"\n"+random_message1))
         elif weather["main"]['temp'] < 0:   #при 0
             status = bot.send_photo(message.chat.id, 'https://darkside.guru/files/404city.png', "Сейчас в городе " + str(weather["name"]) + " температура " +
                          str(weather["main"]['temp']) + "°C" + "\n" +
                          "Влажность: " + str(int(weather['main']['humidity'])) + "%" + "\n" +
-                         "На улице сейчас " + str(weather['weather'][0]["description"]+random_message2))
+                         "На улице сейчас " + str(weather['weather'][0]["description"]+"\n"+random_message2))
         elif weather["main"]['temp'] < 10:  #при +10
             status = bot.send_photo(message.chat.id, 'https://darkside.guru/files/404city.png', "Сейчас в городе " + str(weather["name"]) + " температура " +
                          str(weather["main"]['temp']) + "°C" + "\n" +
                          "Влажность: " + str(int(weather['main']['humidity'])) + "%" + "\n" +
-                         "На улице сейчас " + str(weather['weather'][0]["description"]+random_message3))
+                         "На улице сейчас " + str(weather['weather'][0]["description"]+"\n"+random_message3))
         elif weather["main"]['temp'] < 30:  #при +30
             status = bot.send_photo(message.chat.id, 'https://darkside.guru/files/404city.png', "Сейчас в городе " + str(weather["name"]) + " температура " +
                          str(weather["main"]['temp']) + "°C" + "\n" +
                          "Влажность: " + str(int(weather['main']['humidity'])) + "%" + "\n" +
-                         "На улице сейчас " + str(weather['weather'][0]["description"]+random_message4))
+                         "На улице сейчас " + str(weather['weather'][0]["description"]+"\n"+random_message4))
         else:   #при +30+
             status = bot.send_photo(message.chat.id, 'https://darkside.guru/files/404city.png', "Сейчас в городе " + str(weather["name"]) + " температура " +
                          str(weather["main"]['temp']) + "°C" + "\n" +
                          "Влажность: " + str(int(weather['main']['humidity'])) + "%" + "\n" +
-                         "На улице сейчас " + str(weather['weather'][0]["description"]+random_message5))
+                         "На улице сейчас " + str(weather['weather'][0]["description"]+"\n"+random_message5))
 	
        # bot.send_message(message.chat.id, "Сейчас в городе " + str(weather["name"]) + " температура " +
        #                  str(weather["main"]['temp']) + "°C" + "\n" +
