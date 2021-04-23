@@ -52,7 +52,7 @@ def test(message):
         else:   #при +30+
             status = "Не выходите на улицу без надобности и пейте много воды, на улице жарко!" # random_message5 #
             #bot.send_photo(message.chat.id, 'ссылка на изображение', "") # изображение5
-        bot.send_message(message.chat.id, status) 
+        #bot.send_message(message.chat.id, status) 
        # bot.send_message(message.chat.id, "Сейчас в городе " + str(weather["name"]) + " температура " +
         #                 str(weather["main"]['temp']) + "°C" + "\n" +
         #                 "Влажность: " + str(int(weather['main']['humidity'])) + "%" + "\n" +
