@@ -36,19 +36,14 @@ def test(message):
 
         if weather["main"]['temp'] < -10:   #при -10
             status = random_message1 #"На улице холодно, одевайтесь теплее! Чтобы согреться, могу предложить Вам сходить в ресторан и выпить чашечку кофе!" 
-	 bot.send_photo(message.chat.id, 'https://darkside.guru/files/404city.png', "Город " + city_name + " не найден ")
         elif weather["main"]['temp'] < 0:   #при 0
             status = random_message2 #"Мороз и солнце, день чудесный! Самое время выпить глинтвейн!"
-	 bot.send_photo(message.chat.id, 'https://darkside.guru/files/404city.png', "Город " + city_name + " не найден ")
         elif weather["main"]['temp'] < 10:  #при +10
             status = random_message3 #"Погода шепчет, что сегодня вам нужно сходить на каток! Но стоит одеть шапку и шарф!"
-	 bot.send_photo(message.chat.id, 'https://darkside.guru/files/404city.png', "Город " + city_name + " не найден ")
         elif weather["main"]['temp'] < 30:  #при +30
             status = random_message4 #"Пейте много воды, на улице жарко!"
-	 bot.send_photo(message.chat.id, 'https://darkside.guru/files/404city.png', "Город " + city_name + " не найден ")
         else:   #при +30+
             status = random_message5 #"Не выходите на улицу без надобности и пейте много воды, на улице жарко!"
-	 bot.send_photo(message.chat.id, 'https://darkside.guru/files/404city.png', "Город " + city_name + " не найден ")
 
         bot.send_message(message.chat.id, "Сейчас в городе " + str(weather["name"]) + " температура " +
                          str(weather["main"]['temp']) + "°C" + "\n" +
