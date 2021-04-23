@@ -13,14 +13,6 @@ def welcome(message):
                                       f' напиши название города и узнай погоду в нём. \n' 
                                       f'Для помощи напиши "/help"') #Сообщение при запуске
 
-
-@bot.message_handler(commands=['help'])
-def welcome(message):
-    bot.send_message(message.chat.id,
-                     f'/start запуск бота \n'
-                     ) #сообщение(ответ) на команду /help
-
-
 @bot.message_handler(content_types=['text']) #обработчик
 def test(message):
     city_name = message.text
