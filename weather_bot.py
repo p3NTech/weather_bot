@@ -1,6 +1,7 @@
 import requests
 import telebot
 import constants
+import random
 
 print("")
 print("initialize") #сообщение в консоль
