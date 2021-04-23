@@ -1,12 +1,15 @@
 import requests
 import telebot
-import api
 import random
+
+url = 'http://api.openweathermap.org/data/2.5/weather' #open weather url
+api_open_weather = '966cc6ce89188b2bc797546a3487bf55'#ключ open weather api
+api_telegram_token = '1687680321:AAHm7NH2ZsagoBAlcfNSV8U5Wwj0U9jhHK0' #токен telegram api
 
 print("")
 print("initialize") #сообщение в консоль
 
-bot = telebot.TeleBot(api.api_telegram_token)
+bot = telebot.TeleBot(api_telegram_token)
 
 message1 = ['"1.1"', '"1.2"', '"1.3"', '"1.4"','"1.5"']
 message2 = ['"2.1"', '"2.2"', '"2.3"', '"2.4"','"2.5"']
@@ -30,8 +33,8 @@ def test(message):
     city_name = message.text
 
     try:
-        params = {'APPID': api.api_open_weather, 'q': city_name, 'units': 'metric', 'lang': 'ru'}
-        result = requests.get(api.url, params=params)#параметры api open weather
+        params = {'APPID': api_open_weather, 'q': city_name, 'units': 'metric', 'lang': 'ru'}
+        result = requests.get(url, params=params)#параметры api open weather
         weather = result.json()#экспорт параметров
 
         if weather["main"]['temp'] < -10:   #при -10
