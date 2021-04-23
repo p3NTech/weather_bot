@@ -15,3 +15,5 @@ random_message2 = lambda: random.choice(message2)
 random_message3 = lambda: random.choice(message3)
 random_message4 = lambda: random.choice(message4)
 random_message5 = lambda: random.choice(message5)
+
+
