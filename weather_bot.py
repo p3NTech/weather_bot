@@ -5,6 +5,8 @@ import constants
 print("")
 print("initialize") #сообщение в консоль
 
+bot = telebot.TeleBot(constants.api_telegram_token)
+
 @bot.message_handler(commands=['start'])#старт
 def welcome(message):
     bot.send_message(message.chat.id, f'Привет!  {message.from_user.first_name} \n'
@@ -22,7 +24,7 @@ def test(message):
     city_name = message.text
 
     try:
-        params = {'APPID': api_open_weather, 'q': city_name, 'units': 'metric', 'lang': 'ru'}
+        params = {'APPID': constants.api_open_weather, 'q': city_name, 'units': 'metric', 'lang': 'ru'}
         result = requests.get(url, params=params)#параметры api open weather
         weather = result.json()#экспорт параметров
 
