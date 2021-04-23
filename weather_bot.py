@@ -44,9 +44,7 @@ str(weather["main"]['temp']) + "°C" + "\n" + "💦Влажность: " + str(i
 		
         else:status = bot.send_photo(message.chat.id, 'http://f0535055.xsph.ru/1/pog2.jpg', "🌡Сейчас в городе " + str(weather["name"]) + " температура " +
 str(weather["main"]['temp']) + "°C" + "\n" + "💦Влажность: " + str(int(weather['main']['humidity'])) + "%" + "\n" + "🏘На улице сейчас " + str(weather['weather'][0]["description"]) + "\n"+"Не выходите на улицу без надобности и пейте много воды, на улице жарко!" ) # 
-
 #except:bot.send_photo(message.chat.id, 'https://darkside.guru/files/404city.png', "Город " + city_name + " не найден ") # сообщение в случае если город не найден
-print("Started!")
 bot.polling(none_stop=True)
 print("")
 print("STOP+")
