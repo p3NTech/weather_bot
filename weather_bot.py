@@ -18,7 +18,7 @@ random_message3 = lambda: random.choice(message3)
 random_message4 = random.choice(message4)
 random_message5 = lambda: random.choice(message5)
 
-print("random_message4")
+print(random_message4)
 
 bot = telebot.TeleBot(constants.api_telegram_token)
 
