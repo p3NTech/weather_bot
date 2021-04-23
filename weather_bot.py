@@ -44,11 +44,10 @@ def test(message):
         elif weather["main"]['temp'] < 10:  #при +10
             status = random_message3 #"Погода шепчет, что сегодня вам нужно сходить на каток! Но стоит одеть шапку и шарф!"
         elif weather["main"]['temp'] < 30:  #при +30
-            status = random_message4 #"Пейте много воды, на улице жарко!"
-	bot.send_photo(message.chat.id, 'https://darkside.guru/files/404city.png', "Сейчас в городе " + str(weather["name"]) + " температура " +
+            status = bot.send_photo(message.chat.id, 'https://darkside.guru/files/404city.png', "Сейчас в городе " + str(weather["name"]) + " температура " +
                          str(weather["main"]['temp']) + "°C" + "\n" +
                          "Влажность: " + str(int(weather['main']['humidity'])) + "%" + "\n" +
-                         "На улице сейчас " + str(weather['weather'][0]["description"])
+                         "На улице сейчас " + str(weather['weather'][0]["description"]+random_message4 )
         else:   #при +30+
             status = random_message5 #"Не выходите на улицу без надобности и пейте много воды, на улице жарко!"
 
