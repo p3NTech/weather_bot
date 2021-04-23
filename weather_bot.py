@@ -43,17 +43,22 @@ def test(message):
            # bot.send_photo(message.chat.id, 'ссылка на изображение', "") # изображение3
         elif weather["main"]['temp'] < 30:  #при +30
             #status =  "Пейте много воды, на улице жарко!" # random_message4 #
-           status =  bot.send_photo(message.chat.id, 'http://f0535055.xsph.ru/1/pog2.jpg', "Пейте много воды, на улице жарко!") # изображение4
-        else:   #при +30+
-            status = "Не выходите на улицу без надобности и пейте много воды, на улице жарко!" # random_message5 #
-            #bot.send_photo(message.chat.id, 'ссылка на изображение', "") # изображение5
-
-        bot.send_message(message.chat.id, "Сейчас в городе " + str(weather["name"]) + " температура " +
+           status =  bot.send_photo(message.chat.id, 'http://f0535055.xsph.ru/1/pog2.jpg', "Сейчас в городе " + str(weather["name"]) + " температура " +
                          str(weather["main"]['temp']) + "°C" + "\n" +
                          "Влажность: " + str(int(weather['main']['humidity'])) + "%" + "\n" +
                          "На улице сейчас " + str(weather['weather'][0]["description"]) + "\n"+
                          "-------------------------------------------------------------------"
-                         "\n" + status)
+                         "\n"+"Пейте много воды, на улице жарко!") # изображение4
+        else:   #при +30+
+            status = "Не выходите на улицу без надобности и пейте много воды, на улице жарко!" # random_message5 #
+            #bot.send_photo(message.chat.id, 'ссылка на изображение', "") # изображение5
+        bot.send_message(message.chat.id, status) 
+       # bot.send_message(message.chat.id, "Сейчас в городе " + str(weather["name"]) + " температура " +
+        #                 str(weather["main"]['temp']) + "°C" + "\n" +
+        #                 "Влажность: " + str(int(weather['main']['humidity'])) + "%" + "\n" +
+        #                 "На улице сейчас " + str(weather['weather'][0]["description"]) + "\n"+
+        #                 "-------------------------------------------------------------------"
+         #                "\n" + status)
     except:
 	
         bot.send_photo(message.chat.id, 'https://darkside.guru/files/404city.png', "Город " + city_name + " не найден ") # сообщение в случае если город не найден
