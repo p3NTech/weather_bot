@@ -61,4 +61,4 @@ def test(message):
 print("Started!")
 bot.polling(none_stop=True)
 print("")
-print("Stoped!")
+print("STOP+")
