@@ -76,4 +76,4 @@ def test(message):
 print("Started!")#сообщение в консоль
 bot.polling(none_stop=True)
 print("")
-print("Stoped!")#сообщение в консоль
+print("Stopped!")#сообщение в консоль
