@@ -17,7 +17,6 @@ def welcome(message):
                      f'/start запуск бота \n'
                      )#сообщение(ответ) на команду /help
 
-
 @bot.message_handler(content_types=['text'])#обработчик
 def test(message):
     city_name = message.text
