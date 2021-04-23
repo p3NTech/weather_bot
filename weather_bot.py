@@ -32,13 +32,8 @@ def test(message):
         result = requests.get(constants.url, params=params) #параметры api open weather
         weather = result.json() #экспорт параметров
 
-        if weather["main"]['temp'] < -10:   #при -10
-		status = bot.send_photo(message.chat.id, 'http://f0535055.xsph.ru/1/pog2.jpg', "🌡Сейчас в городе " + str(weather["name"]) + " температура " +
-                         str(weather["main"]['temp']) + "°C" + "\n" +
-                         "💦Влажность: " + str(int(weather['main']['humidity'])) + "%" + "\n" +
-                         "🏘На улице сейчас " + str(weather['weather'][0]["description"]) + "\n"+
-                         "-------------------------------------------------------------------"
-                         "\n"+"❕Очень холодно, сидим дома!" ) #
+        if weather["main"]['temp'] < -10:status = bot.send_photo(message.chat.id, 'http://f0535055.xsph.ru/1/pog2.jpg', "🌡Сейчас в городе " + str(weather["name"]) + " температура " +
+str(weather["main"]['temp']) + "°C" + "\n" + "💦Влажность: " + str(int(weather['main']['humidity'])) + "%" + "\n" + "🏘На улице сейчас " + str(weather['weather'][0]["description"]) + "\n"+"Очень холодно, сидим дома!" ) #
         elif weather["main"]['temp'] < 0:   #при 0
 			 status = ""
 			 bot.send_photo(message.chat.id, 'http://f0535055.xsph.ru/1/pog2.jpg', "🌡Сейчас в городе " + str(weather["name"]) + " температура " +
