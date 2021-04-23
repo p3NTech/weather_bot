@@ -31,7 +31,7 @@ def test(message):
 
     try:
         params = {'APPID': api.api_open_weather, 'q': city_name, 'units': 'metric', 'lang': 'ru'}
-        result = requests.get(url, params=params)#параметры api open weather
+        result = requests.get(api.url, params=params)#параметры api open weather
         weather = result.json()#экспорт параметров
 
         if weather["main"]['temp'] < -10:   #при -10
