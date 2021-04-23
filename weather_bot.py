@@ -1,9 +1,12 @@
 import requests
 import telebot
 import constants
+import random
 
 print("")
 print("initialize") #сообщение в консоль
+
+print("constants.random_message4")
 
 bot = telebot.TeleBot(constants.api_telegram_token)
 
