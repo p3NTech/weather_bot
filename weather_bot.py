@@ -47,7 +47,7 @@ def test(message):
             status = bot.send_photo(message.chat.id, 'https://darkside.guru/files/404city.png', "Сейчас в городе " + str(weather["name"]) + " температура " +
                          str(weather["main"]['temp']) + "°C" + "\n" +
                          "Влажность: " + str(int(weather['main']['humidity'])) + "%" + "\n" +
-                         "На улице сейчас " + str(weather['weather'][0]["description"]+random_message4 )
+                         "На улице сейчас " + str(weather['weather'][0]["description"]+random_message4))
         else:   #при +30+
             status = random_message5 #"Не выходите на улицу без надобности и пейте много воды, на улице жарко!"
 
