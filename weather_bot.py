@@ -3,8 +3,8 @@ import telebot
 import random
 
 url = 'http://api.openweathermap.org/data/2.5/weather' #open weather url
-api_open_weather = '966cc6ce89188b2bc797546a3487bf55'#ключ open weather api
-api_telegram_token = '1687680321:AAHm7NH2ZsagoBAlcfNSV8U5Wwj0U9jhHK0' #токен telegram api
+api_open_weather = ''#ключ open weather api
+api_telegram_token = '' #токен telegram api
 
 print("")
 print("initialize") #сообщение в консоль
@@ -62,13 +62,6 @@ def test(message):
                          str(weather["main"]['temp']) + "°C" + "\n" +
                          "Влажность: " + str(int(weather['main']['humidity'])) + "%" + "\n" +
                          "На улице сейчас " + str(weather['weather'][0]["description"]+"\n"+random_message5))
-	
-       # bot.send_message(message.chat.id, "Сейчас в городе " + str(weather["name"]) + " температура " +
-       #                 str(weather["main"]['temp']) + "°C" + "\n" +
-       #                 "Влажность: " + str(int(weather['main']['humidity'])) + "%" + "\n" +
-       #                 "На улице сейчас " + str(weather['weather'][0]["description"]) + "\n"+
-       #                 "-------------------------------------------------------------------"
-       #                 "\n" + status)
 
     except:
         bot.send_photo(message.chat.id, 'https://darkside.guru/files/404city.png', "Город " + city_name + " не найден") # сообщение в случае если город не найден
